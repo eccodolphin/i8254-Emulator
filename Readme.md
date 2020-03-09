@@ -2,9 +2,9 @@
 
 Emulator of Intel 8254 Programmable Interval Timer.
 
-Docs are in progress.
-
 Technical information ||
 --- | ---
 Language	| JS
 Framework	| jQuery
+
+Docs are in progress.
