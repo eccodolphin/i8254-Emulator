@@ -1,0 +1,301 @@
+#fromDataBus-toDataBuffer-arrow
+{
+	width: 1.1rem;
+	height: 5.35rem;
+	background-color: transparent;
+	border: 0;
+	left: 5rem;
+	top: 10.45rem;
+}
+
+#fromDataBus-toDataBuffer-arrow .tip
+{
+	border: 0;
+	font-size: 0.8rem;
+	width: 0.8rem;
+	left: 0.15rem;
+	background-color: transparent;
+}
+
+#fromDataBus-toDataBuffer-arrow .down.tip
+{
+	bottom: -0.2rem;
+}
+
+#fromDataBus-toDataBuffer-arrow .up.tip
+{
+	top: -0.2rem;
+}
+
+#fromDataBus-toDataBuffer-arrow .line
+{
+	border-left-width: 0.05rem;
+	border-left-style: solid;
+	border-left-color: black;
+	
+	height: 4.5rem;
+	left: 0.45rem;
+	top: 0.3rem;
+}
+
+#fromDataBus-toDataBuffer-arrow .slash
+{
+	border-left-width: 0.05rem;
+	border-left-style: solid;
+	border-left-color: black;
+	
+	height: 1rem;
+	top: 40%;
+	left: 0.5rem;
+	
+	transform: rotate(55deg);
+}
+
+#fromDataBus-toDataBuffer-arrow .bitDepth
+{
+	width: 1rem;
+	height: 1rem;
+	top: 30%;
+	left: -0.2rem;
+	font-size: 1rem;
+	background-color: transparent;
+	border: 0;
+}
+
+
+
+.fromAddrBus-toRWL-arrow
+{
+	width: 1.2rem;
+	height: 3.3rem;
+	top: 11.4rem;
+	background-color: transparent;
+	border: 0;
+}
+
+.fromAddrBus-toRWL-arrow .tip
+{
+	border: 0;
+	font-size: 0.8rem;
+	width: 0.8rem;
+	left: 0.2rem;
+	background-color: transparent;
+	bottom: -0.2rem;
+}
+
+.fromAddrBus-toRWL-arrow .line
+{
+	border-left-width: 0.05rem;
+	border-left-style: solid;
+	border-left-color: black;
+	
+	height: 2.6rem;
+	left: 0.51rem;
+	top: 0rem;
+}
+
+#fromAddrBus-toRWL-CS-arrow
+{
+	left: 13.35rem;
+}
+
+#fromAddrBus-toRWL-CS-arrow .slash
+{
+	border-left-width: 0.05rem;
+	border-left-style: solid;
+	border-left-color: black;
+	
+	height: 1rem;
+	top: 35%;
+	left: 0.5rem;
+	
+	transform: rotate(55deg);
+}
+
+#fromAddrBus-toRWL-CS-arrow .bitDepth
+{
+	width: 2rem;
+	height: 1rem;
+	top: 25%;
+	left: -1.7rem;
+	font-size: 1rem;
+	background-color: transparent;
+	border: 0;
+}
+
+#fromAddrBus-toRWL-A1-arrow
+{
+	left: 17.65rem;
+}
+
+#fromAddrBus-toRWL-A0-arrow
+{
+	left: 20.5rem;
+}
+
+
+
+.fromRuleBus-toRWL-arrow
+{
+	width: 1.3rem;
+	height: 6.3rem;
+	top: 8.4rem;
+	background-color: transparent;
+	border: 0;
+}
+
+.fromRuleBus-toRWL-arrow .tip
+{
+	border: 0;
+	font-size: 0.8rem;
+	width: 0.8rem;
+	left: 0.25rem;
+	background-color: transparent;
+	bottom: -0.2rem;
+}
+
+.fromRuleBus-toRWL-arrow .line
+{
+	border-left-width: 0.05rem;
+	border-left-style: solid;
+	border-left-color: black;
+	
+	height: 5.6rem;
+	left: 0.57rem;
+	top: 0rem;
+}
+
+#fromRuleBus-toRWL-RD-arrow
+{
+	left: 24.75rem;
+}
+
+#fromRuleBus-toRWL-WR-arrow
+{
+	left: 27.7rem;
+}
+
+
+
+#fromDataBuffer-toRWL-arrow
+{
+	width: 2.95rem;
+	height: 3rem;
+	top: 17rem;
+	left: 9.15rem;
+	background-color: transparent;
+	border: 0;
+}
+
+#fromDataBuffer-toRWL-arrow .line
+{
+	border-bottom-width: 0.05rem;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	
+	width: 2.3rem;
+	left: 0.2rem;
+	top: 0.8rem;
+}
+
+#fromDataBuffer-toRWL-arrow .tip
+{
+	border: 0;
+	font-size: 1.3rem;
+	width: 1vw;
+	height: 1vh;
+	background-color: transparent;
+	top: 0;
+}
+
+#fromDataBuffer-toRWL-arrow .right.tip
+{
+	right: 0;
+	text-align: right;
+}
+
+#fromDataBuffer-toRWL-arrow .left.tip
+{
+	left: 0;
+	text-align: left;
+}
+
+
+
+#toRWL-arrow
+{
+	width: 12.9rem;
+	height: 3rem;
+	top: 17rem;
+	left: 30.1rem;
+	background-color: transparent;
+	border: 0;
+}
+
+#toRWL-arrow .tip 
+{
+	border: 0;
+	font-size: 1.3rem;
+	width: 1rem;
+	height: 1rem;
+	background-color: transparent;
+	top: 0;
+	left: 0;
+	text-align: left;
+}
+
+#toRWL-arrow .line
+{
+	border-bottom-width: 0.05rem;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	
+	width: 12.7rem;
+	left: 0.2rem;
+	top: 0.8rem;
+}
+
+
+
+.CWR-arrow
+{
+	width: 3.1rem;
+	height: 1.8rem;
+	top: 21rem;
+	background-color: transparent;
+	border: 0;
+}
+
+.CWR-arrow .tip
+{
+	border: 0;
+	font-size: 1.3rem;
+	width: 1rem;
+	height: 1rem;
+	background-color: transparent;
+	top: 0;
+	right: 0;
+	text-align: right;
+}
+
+.CWR-arrow .line
+{
+	border-bottom-width: 0.05rem;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: black;
+	
+	width: 2.3rem;
+	left: 0.2rem;
+	top: 0.8rem;
+}
+
+#toCWR-arrow
+{
+	left: 30rem;
+}
+
+#fromCWR-arrow
+{
+	left: 40rem;
+}

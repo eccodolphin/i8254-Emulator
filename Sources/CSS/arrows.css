@@ -1,0 +1,346 @@
+.arrow {
+	margin: 0px;
+	padding: 0px;
+	font-size: 22px;
+	font-weight: 800;
+	position: absolute;
+}
+
+.line {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	background-color: black;
+}
+
+
+
+
+
+/* TIMER */
+
+.to_timer_arrow {
+	margin: 0px;
+	
+	font-size: 22px;
+	font-weight: 800;
+	
+	position: absolute;
+	left: 219px;
+}
+
+#to_timer_arrow_1 {
+	top: 555px;
+}
+
+#to_timer_arrow_2 {
+	top: 800px;
+}
+
+#to_timer_arrow_3 {
+	top: 1045px;
+}
+
+.to_timer_line {
+	background-color: black;
+	border: 0px;
+	
+	width: 40px;
+	margin: 0px;
+	padding: 0px;
+	
+	position: absolute;
+	left: 180px;
+}
+
+#to_timer_line_1 {
+	top: 570px;
+}
+
+#to_timer_line_2 {
+	top: 815px;
+}
+
+#to_timer_line_3 {
+	top: 1060px;
+}
+
+#to_timer_big_line_1 {
+	width: 635px;
+	
+	top: 743px;
+	left: -138px;
+	
+	transform: rotate(90deg);
+}
+
+#to_timer_big_line_2 {
+	width: 693px;
+	
+	top: 425px;
+	left: 179px;
+}
+
+
+
+
+
+/* RWL */
+
+#to_rwl_arrow {
+	margin: 0px;
+	padding: 0px;
+	
+	font-size: 22px;
+	font-weight: 800;
+	
+	position: absolute;
+	top: 294px;
+	left: 671px;
+}
+
+#to_rwl_big_line_1 {
+	width: 190px;
+	
+	top: 308px;
+	left: 682px;
+}
+
+#to_rwl_big_line_2 {
+	width: 117px;
+	
+	top: 366px;
+	left: 813px;
+	
+	transform: rotate(90deg);
+}
+
+
+	
+
+
+/* CWR */
+
+#cwr_arrow_1 {
+	top: 350px;
+	left: 709px;
+}
+
+#cwr_arrow_2 {
+	top: 416px;
+	left: 775px;
+	font-size: 11px;
+}
+
+#cwr_line_1 {
+    width: 50px;
+    top: 364px;
+    left: 671px;
+}
+
+#cwr_line_2 {
+    width: 45px;
+    top: 397px;
+    left: 758px;
+	transform: rotate(90deg);
+}
+
+
+
+
+
+/* DATA BUFFER */
+
+#data_buf_arrow_1 {
+	top: 320px;
+	left: 341px;
+}
+
+#data_buf_arrow_2 {
+	top: 320px;
+	left: 389px;
+}
+
+#data_buf_line {
+	width: 30px;
+	top: 334px;
+	left: 361px;
+}
+
+
+
+
+
+/* BUSSES */
+
+.bus {
+	border-radius: 0px;
+	border: 0px;
+		
+	width: 200px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.bus_title {
+	width: 140px;
+	top: -20px;
+	left: 30px;
+}
+
+
+
+.bus_left,
+.bus_right {
+	font-size: 60px;
+	border: 0px;
+	
+	width: 50px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	
+	position: absolute;
+	top: -23px;
+}
+
+.bus_left {
+	left: 0px;
+}
+
+.bus_right {
+	right: 0px;
+}
+
+
+
+.bus_mid {
+	border-radius: 0px;
+	border: 0px;
+	
+	width: 100px;
+	height: 30px;
+	
+	top: 0px;
+	left: 50px;
+}
+
+.bus_mid_top,
+.bus_mid_bot {
+	width: 130px;
+	position: absolute;
+	left: -3px;
+}
+
+.bus_mid_top {
+	top: 6.3px;
+}
+
+.bus_mid_bot {
+	bottom: 7.6px;
+}
+
+
+
+#bus_data {
+	top: 195px;
+	left: 190px;
+}
+
+#bus_addr {
+	top: 170px;
+	left: 380px;
+}
+
+#bus_rule {
+	top: 125px;
+	left: 540px;
+}
+	
+
+
+
+
+/* ARROWS FROM BUSSESS */
+
+.from_bus_slot {
+	border-radius: 0px;
+	width: 10px;
+	height: 66px;
+	top: 150px;
+	left: 100px;
+	border: 0px;
+}
+
+.from_bus_line {
+	width: 60px;
+	transform: rotate(90deg);
+	left: -25px;
+	top: 30px
+}
+
+.from_bus_arrow {
+	left: -0.5px;
+	bottom: -11.5px;
+	font-size: 11px;
+}
+
+#from_bus_slot_data {
+	top: 216px;
+	left: 287px;
+}
+
+#from_bus_slot_addr_1 {
+	top: 191.5px;
+	left: 431px;
+}
+
+#from_bus_slot_addr_2 {
+	top: 191.5px;
+	left: 491px;
+}
+
+#from_bus_slot_addr_3 {
+	top: 191.5px;
+	left: 531px;
+}
+
+#from_bus_slot_rule_1 {
+	top: 191.5px;
+	left: 591px;
+}
+
+#from_bus_slot_rule_2 {
+	top: 191.5px;
+	left: 631px;
+}
+
+
+
+.slash {
+	transform: rotate(150deg);
+	width: 15px;
+	top: 30px;
+	left: -2px;
+}
+
+p.slash_line_title {
+	border: 0px;
+	font-size: 12px;
+	border: 0px;
+	background-color: transparent;
+	text-align: right;
+	width: 25px;
+	top: 15px;
+	left: -29px;
+}
+
+#rule_bus_line_1, #rule_bus_line_2 {
+	width: 108px;
+	top: 7px;
+	left: -49px;
+}
+
+

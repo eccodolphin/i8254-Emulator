@@ -1,0 +1,42 @@
+#assemblerer {
+	background-color: #eeeeee;
+	border: 0.15rem solid black;
+	border-radius: 1rem;
+	width: 22rem;
+	height: 21rem;
+	left: 2rem;
+	top: 1rem;
+}
+
+#assemblerer .title {
+	border: 0.1rem solid black;
+	border-radius: 1rem;	
+	width: 11rem;
+	height: 1.5rem;
+	padding: 0.2rem 0;
+	top: 0.7rem;
+	left: 5.2rem;
+}
+
+#assemblerer .code {
+	border: 0.1rem solid black;
+	border-radius: 1rem;
+	width: 15.5rem;
+	height: 12rem;
+	padding: 0.5rem 1rem;
+	top: 3.5rem;
+	left: 2.1rem;
+	text-align: left;	
+	resize: none;
+	font-size: 1rem;
+}
+
+#assemblerer .run {
+	border-radius: 0.5rem;
+	width: 7rem;
+	height: 1.85rem;
+	padding: 0.3rem 0;
+	left: 7rem;
+	top: 18.3rem;
+	font-size: 1rem;
+}

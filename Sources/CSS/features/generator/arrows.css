@@ -1,0 +1,98 @@
+#fromGeneratorLine-1
+{
+    border-top: 0.05rem solid black;
+    width: 2rem;
+    left: 94.2rem;
+    top: 10rem;
+}
+
+#fromGeneratorLine-2
+{
+    border-left: 0.05rem solid black;
+    height: 13.95rem;
+    left: 96.2rem;
+    top: 10rem;
+}
+
+#fromGeneratorLine-3
+{
+    border-top: 0.05rem solid black;
+    width: 73rem;
+    left: 23rem;
+    top: 24rem;
+}
+
+#toClkVericalLine-0
+{
+    border-left: 0.05rem solid black;
+    height: 3.9rem;
+    left: 23rem;
+    top: 20rem;
+}
+
+#toClkVericalLine-1
+{
+    border-left: 0.05rem solid black;
+    height: 3.9rem;
+    left: 47rem;
+    top: 20rem;
+}
+
+#toClkVericalLine-2
+{
+    border-left: 0.05rem solid black;
+    height: 3.9rem;
+    left: 71rem;
+    top: 20rem;
+}
+
+#toClkHorizontalLine-0
+{
+    border-top: 0.05rem solid black;
+    width: 2.1rem;
+    left: 20.8rem;
+    top: 20rem;
+}
+
+#toClkHorizontalLine-1
+{
+    border-top: 0.05rem solid black;
+    width: 2.1rem;
+    left: 44.8rem;
+    top: 20rem;
+}
+
+#toClkHorizontalLine-2
+{
+    border-top: 0.05rem solid black;
+    width: 2.1rem;
+    left: 68.8rem;
+    top: 20rem;
+}
+
+#toClkTip-0
+{
+    left: 20.4rem;
+    top: 19.55rem;
+    border: 0;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+#toClkTip-1
+{
+    left: 44.4rem;
+    top: 19.55rem;
+    border: 0;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+#toClkTip-2
+{
+    left: 68.4rem;
+    top: 19.55rem;
+    border: 0;
+    background-color: transparent;
+    font-size: 1rem;
+}

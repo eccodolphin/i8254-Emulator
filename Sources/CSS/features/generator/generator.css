@@ -1,0 +1,60 @@
+#generator {
+	background-color: #eeeeee;
+	width: 19rem;
+	height: 13.5rem;	
+	left: 75rem;
+	top: 3rem;
+	border-radius: 1rem;
+	border-width: 0.13rem;
+}
+
+#generator .title {
+	border-radius: 1rem;
+	width: 16rem;
+	height: 1.7rem;
+	top: 0.5rem;
+	left: 1.5rem;
+	font-size: 1.2rem;
+	border: 0.1rem solid black;
+	padding: 0.2rem 0;
+}
+
+#generator .screen {
+	width: 17.8rem;
+	height: 7rem;	
+	top: 3.3rem;
+	left: 0.5rem;
+	border: 0.1rem solid black;
+	border-radius: 1rem;
+}
+
+#generator .period {
+	border: 0.1rem solid black;
+	border-radius: 1rem;
+	width: 6.5rem;
+	height: 1.6rem;
+	padding: 0.1rem 0;
+	font-size: 1rem;
+	top: 11rem;
+	left: 2rem;
+	font-size: 1rem;
+}
+
+#generator button {
+	border-radius: 0.5rem;
+	background-color: #ffcc66;
+	height: 1.8rem;
+	padding: 0.1rem;	
+	top: 11rem;
+}
+
+#generator button.play-stop {
+	width: 4rem;
+	left: 9.5rem;
+	font-size: 1rem;
+}
+
+#generator button.single {
+	width: 2rem;
+	left: 14.3rem;
+}

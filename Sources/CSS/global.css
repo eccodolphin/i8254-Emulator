@@ -1,0 +1,72 @@
+* { 
+	position: absolute; 
+	font-size: 1.25rem;
+}
+
+html { 
+	background-color: transparent;  
+	font-size: 1vw;
+	width: 98vw;
+	height: 39vw;
+}
+
+body, div, input {
+	border: 0.1rem solid black;
+	background-color: white;
+}
+
+body {
+	width: 98rem;
+	height: 55rem;
+	margin: 0.5rem 1rem;
+	border-radius: 1rem;
+	border: 0;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+p, input {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	padding: 0.05rem 0;
+}
+
+.basis {
+	background-color: #eeeeee;
+}
+
+button {
+	background-color: #ffcc66;
+	text-align: center;
+}
+
+hr {
+	border: 0;
+	background-color: black;
+	margin: 0;
+}
+
+p.title {
+	border: 0.1rem solid black;
+	background-color: white;
+}
+
+#fromInteraction-toChannels-bus
+{
+	border-left: 0.05rem solid black;
+	height: 8rem;
+	top: 18.35rem;
+	left: 44.5rem;
+}
+
+#toChannels-bus
+{
+	border-top: 0.05rem solid black;
+	width: 47.95rem;
+	top: 26.35rem;
+	left: 13rem;
+}

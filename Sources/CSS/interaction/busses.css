@@ -1,0 +1,115 @@
+#busses
+{
+	width: 40rem;
+	height: 10rem;
+	left: 0;
+	top: 3rem;
+	border: 0;
+	background-color: transparent;
+}
+
+.bus
+{
+	width: 11rem;
+	height: 3rem;
+	background-color: transparent;
+	border: 0;
+}
+
+.bus .left
+{
+	width: 1rem;
+	height: 1rem;
+	left: 3%;
+	bottom: 10%;
+	
+	border-left-width: 0.2rem;
+	border-left-color: black;
+	border-left-style: solid;
+	
+	border-bottom-width: 0.2rem;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	
+	border-right: 0;
+	border-top: 0;
+	
+	transform: rotate(45deg);
+	
+	background-color: transparent;
+}
+
+.bus .right
+{
+	width: 1rem;
+	height: 1rem;
+	right: 3%;
+	bottom: 10%;
+	
+	border-left-width: 0.2rem;
+	border-left-color: black;
+	border-left-style: solid;
+	
+	border-bottom-width: 0.2rem;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	
+	border-right: 0;
+	border-top: 0;
+	
+	transform: rotate(225deg);
+	
+	background-color: transparent;
+}
+
+.bus .middle
+{
+	width: 9.95rem;
+	height: 0.4rem;
+	left: 0.5rem;
+	top: 1.67rem;
+	
+	border-top-width: 0.2rem;
+	border-top-color: black;
+	border-top-style: solid;
+	
+	border-bottom-width: 0.2rem;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	
+	border-right: 0;
+	border-left: 0;
+	
+	background-color: transparent;
+}
+
+.bus .title
+{
+	width: 8rem;
+	height: 1.2rem;
+	font-size: 1rem;
+	left: 1.5rem;
+	top: 0.3rem;
+	text-align: center;
+	border: 0;
+	background-color: transparent;
+}
+
+#dataBus
+{
+	top: 5rem;
+	left: 0rem;
+}
+
+#addrBus
+{
+	top: 6rem;
+	left: 12rem;
+}
+
+#ruleBus
+{
+	top: 3rem;
+	left: 22rem;
+}
+

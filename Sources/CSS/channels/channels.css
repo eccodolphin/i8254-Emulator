@@ -1,0 +1,233 @@
+#channels {
+	border: 0;
+	width: 98rem;
+	height: 25rem;
+	left: 0rem;
+	top: 29rem;
+	background-color: transparent;
+	border-radius: 1rem;
+}
+
+.channel {
+	border-radius: 1rem;
+	border-width: 0.13rem;
+	width: 23rem;
+	height: 17rem;
+	top: 1rem;
+}
+
+#channel0 {
+	left: 1rem;
+}
+
+#channel1 {
+	left: 25rem;
+}
+
+#channel2 {
+	left: 49rem;
+}
+
+.channel .title {
+	border-radius: 1rem;
+	border-width: 0.05rem;
+	width: 12rem;
+	height: 1.5rem;
+	top: 1rem;
+	left: 5.5rem;
+	font-size: 1.25rem;
+	padding: 0.3rem 0;	
+}
+
+.channel .panel {
+	border-radius: 1rem;
+	border-width: 0.05rem;
+	width: 21rem;
+	height: 12rem;	
+	top: 4rem;
+	left: 1rem;
+}
+
+.channel .panel .regs {
+	border: 0;
+	border-radius: 1rem;
+	background-color: transparent;
+	width: 15rem;
+	height: 10rem;
+	left: 6rem;
+	top: 2rem;
+	z-index: 2;
+}
+
+.channel .panel .reg {
+	border-radius: 1rem;
+	width: 6rem;
+	height: 1.5rem;
+	font-size: 1rem;
+}
+
+.channel .panel .in.reg {
+	background-color: #66ccff;
+	left: 1.1rem;
+}
+
+.channel .panel .out.reg {
+	background-color: #ff9999;
+	left: 7.8rem;
+}
+
+.channel .panel .status.reg {
+	top: 1rem;
+}
+
+.channel .panel .small.reg {
+	top: 3.1rem;
+}
+
+.channel .panel .big.reg {	
+	top: 5.2rem;
+}
+
+.channel .panel .counter.reg {
+	background-color: #cc99ff;
+	width: 12.7rem;
+	left: 1.1rem;
+	top: 7.4rem;
+	font-size: 1rem;
+}
+
+.channel .panel .labels {
+	border: 0;
+	background-color: transparent;
+	width: 20rem;
+	height: 11rem;
+	left: 0.5rem;
+	top: 0.5rem;
+	border-radius: 1rem;
+	z-index: 1;
+}
+
+.channel .panel .label {
+	width: 6rem;
+	font-size: 1.2rem;
+	text-align: center;
+	background-color: transparent;
+	border-radius: 1rem;
+}
+
+.channel .panel .status.label  {
+	top: 2.5rem;
+	left: 0.4rem;
+}
+
+.channel .panel .small.label  {
+	top: 4.7rem;
+	left: 0.4rem;
+}
+
+.channel .panel .big.label  {
+	top: 6.9rem;
+	left: 0.4rem;
+}
+
+.channel .panel .in.label  {
+	top: 0.5rem;
+	left: 6.7rem;
+}
+
+.channel .panel .out.label  {
+	top: 0.5rem;
+	left: 13.4rem;
+}
+
+.channel .panel .counter.label {
+	top: 8.9rem;
+	left: 0.4rem;
+}
+
+.channel .slots {
+	border: 0;
+	width: 23rem;
+	height: 6rem;
+	left: 0;
+	bottom: -6.1rem;
+	background-color: transparent;
+	border-radius: 1rem;
+}
+
+.channel .slot {
+	border: 0;
+	background-color: transparent;
+	border-radius: 1rem;
+	width: 3rem;
+	height: 5rem;
+	top: 0;
+}
+
+.channel .slot.clk {
+	left: 17rem;
+}
+
+.channel .slot.gate {
+	left: 13rem;
+}
+
+.channel .slot.out {
+	left: 9rem;
+}
+
+.channel .slot button {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	top: 1rem;
+	left: 0.5rem;
+	font-size: 1rem;
+	z-index: 1;
+}
+
+.channel .slot p {
+	text-align: center;
+	width: 3rem;
+	height: 1rem;
+	left: 0;
+	top: 3.3rem;
+	font-size: 1rem;
+}
+
+.channel .slot .line {
+	border-left: 0.12rem solid black;
+	height: 1rem;
+	top: 0;
+	left: 1.45rem;
+	background-color: black;
+	z-index: 0;
+}
+
+.channel .arrow
+{
+	width: 2rem;
+	height: 3.6rem;
+	background-color: transparent;
+	border-radius: 0.5rem;
+	left: 11rem;
+	top: -3.7rem;
+	border: 0;
+}
+
+.channel .arrow .line
+{
+	border-left: 0.05rem solid black;
+	height: 3.2rem;
+	left: 0.85rem;
+}
+
+.channel .arrow .tip
+{
+	bottom: -0.4rem;
+	left: 0.4rem;
+	font-size: 1rem;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}

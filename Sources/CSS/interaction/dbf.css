@@ -1,0 +1,34 @@
+#dbf {
+	width: 7rem;
+	height: 6.5rem;
+	left: 2rem;
+	bottom: 2.5rem;
+	border-radius: 1rem;
+	border-width: 0.13rem;
+}
+
+#dbf .byte {
+	text-align: center;
+	width: 80%;
+	height: 20%;
+	left: 10%;
+	top: 7%;
+	font-size: 0.9rem;
+	border-radius: 1rem;
+}
+
+#dbf button {
+	width: 60%;
+	height: 25%;
+	left: 20%;
+	font-size: 0.9rem;
+	border-radius: 1rem;
+}
+
+#dbf button.read { 
+	top: 37%; 
+}
+
+#dbf button.write { 
+	top: 67%; 
+}

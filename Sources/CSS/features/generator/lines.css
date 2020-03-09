@@ -1,0 +1,80 @@
+#generator .horizont-line
+{
+    border-top: 0.3rem solid greenyellow;
+    border-color: greenyellow;
+    width: 2.6rem;
+}
+
+#generator-line-0
+{
+    left: 1rem;
+    top: 5.1rem;
+}
+
+#generator-line-2
+{
+    left: 3.6rem;
+    top: 1.9rem;
+}
+
+#generator-line-4
+{
+    left: 6.2rem;
+    top: 5.1rem;
+}
+
+#generator-line-6
+{
+    left: 8.6rem;
+    top: 1.9rem;
+}
+
+#generator-line-8
+{
+    left: 11.2rem;
+    top: 5.1rem;
+}
+
+#generator-line-10
+{
+    left: 13.8rem;
+    top: 1.9rem;
+}
+
+#generator .vertical-line
+{
+    border-left: 0.3rem solid greenyellow;
+    height: 3.4rem;
+    border-color: greenyellow;
+    top: 1.9rem;
+}
+
+#generator-line-1
+{
+    left: 3.4rem;
+}
+
+#generator-line-3
+{
+    left: 6rem;
+}
+
+#generator-line-5
+{
+    left: 8.6rem;
+}
+
+#generator-line-7
+{
+    left: 11.2rem;
+}
+
+#generator-line-9
+{
+    left: 13.8rem;
+}
+
+#generator-line-11
+{
+    left: 16.4rem;
+}

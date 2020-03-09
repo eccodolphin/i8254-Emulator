@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>i8254 Emulator</title>
+	<meta charset="utf-8">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/interaction/base.css">
+	<link rel="stylesheet" href="css/interaction/dbf.css">
+	<link rel="stylesheet" href="css/interaction/rwl.css">
+	<link rel="stylesheet" href="css/interaction/cwr.css">
+	<link rel="stylesheet" href="css/interaction/busses.css">
+	<link rel="stylesheet" href="css/interaction/arrows.css">
+	<link rel="stylesheet" href="css/channels/channels.css">
+	<link rel="stylesheet" href="css/channels/arrows.css">
+	<link rel="stylesheet" href="css/features/features.css">
+	<link rel="stylesheet" href="css/features/generator/generator.css">
+	<link rel="stylesheet" href="css/features/generator/lines.css">
+	<link rel="stylesheet" href="css/features/generator/arrows.css">
+	<link rel="stylesheet" href="css/features/assemblerer.css">
+	<link rel="stylesheet" href="css/features/tasker.css">
+	<!-- Scripts -->
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/top/rwl.js"></script>
+	<script src="js/top/dbf.js"></script>
+	<script src="js/top/cwr.js"></script>
+	<script src="js/channels/channels.js"></script>
+	<script src="js/channels/bintrans.js"></script>
+	<script src="js/channels/generator/generator.js"></script>
+	<script src="js/channels/generator/screen.js"></script>
+	<script src="js/features/tasker.js"></script>
+	<script src="js/features/assemblerer/assemblerer.js"></script>
+	<script src="js/features/assemblerer/numbersValidator.js"></script>
+	<script src="js/features/assemblerer/transform.js"></script>
+	<script src="js/features/assemblerer/registers.js"></script>
+</head>
+<body>
+	<div id="interaction"> <!-- Взаимодействие (БД, ЛВВ, РУС, шины) -->
+	
+		<div id="dbf" class="basis"> <!-- Буфер данных -->
+			<input type="text" class="byte" placeholder="D7-D0" maxlength="8">
+			<button class="read">Чтение</button>
+			<button class="write">Запись</button>
+		</div>	
+		
+		<div id="rwl" class="basis"> <!-- Логика ввода/вывода --> 
+			<p class="title">Логика ввода и вывода</p>
+			<div class="cs control"> <!-- CS -->
+				<button>0</button>
+				<p>CS</p>
+				<hr size="4">	
+			</div>
+			<div class="a1 control"> <!-- A1 -->
+				<button>1</button>
+				<p>A1</p>
+			</div>
+			<div class="a0 control"> <!-- A0 -->
+				<button>1</button>
+				<p>A0</p>
+			</div>
+			<div class="rd control"> <!-- RD -->
+				<button>1</button>
+				<p>RD</p>
+				<hr size="4">
+			</div>
+			<div class="wr control"> <!-- WR -->
+				<button>0</button>
+				<p>WR</p>
+				<hr size="4">
+			</div>
+		</div>
+		
+		<div id="cwr"> <!-- РУС -->
+			<p class="title">РУС</p>
+		</div>
+		
+		<div id="busses"> <!-- Шины -->
+			<div class="bus" id="dataBus"> <!-- Шина данных -->
+				<div class="left"></div>
+				<div class="middle"></div>
+				<div class="right"></div>
+				<div class="title">Шина данных</div>
+			</div>
+			<div class="bus" id="addrBus"> <!-- Шина адреса -->
+				<div class="left"></div>
+				<div class="middle"></div>
+				<div class="right"></div>
+				<div class="title">Шина адреса</div>
+			</div>
+			<div class="bus" id="ruleBus"> <!-- Шина управления -->
+				<div class="left"></div>
+				<div class="middle"></div>
+				<div class="right"></div>
+				<div class="title">Шина управления</div>
+			</div>
+		</div>
+		
+		<!-- Стрелочки -->
+			<div id="fromDataBus-toDataBuffer-arrow">
+				<div class="line"></div>
+				<div class="down tip">&#9660;</div>
+				<div class="up tip">&#9650;</div>
+				<div class="slash"></div>
+				<div class="bitDepth">8</div>
+			</div>
+			<div class="fromAddrBus-toRWL-arrow" id="fromAddrBus-toRWL-CS-arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+				<div class="slash"></div>
+				<div class="bitDepth">15-2</div>
+			</div>
+			<div class="fromAddrBus-toRWL-arrow" id="fromAddrBus-toRWL-A1-arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+			<div class="fromAddrBus-toRWL-arrow" id="fromAddrBus-toRWL-A0-arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+			<div class="fromRuleBus-toRWL-arrow" id="fromRuleBus-toRWL-RD-arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+			<div class="fromRuleBus-toRWL-arrow" id="fromRuleBus-toRWL-WR-arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+			<div id="fromDataBuffer-toRWL-arrow">
+				<div class="line"></div>
+				<div class="left tip">&#9664;</div>
+				<div class="right tip">&#9654;</div>
+			</div>
+			<div id="toRWL-arrow">
+				<div class="line"></div>
+				<div class="left tip">&#9664;</div>
+			</div>
+			<div class="CWR-arrow" id="toCWR-arrow">
+				<div class="line"></div>
+				<div class="right tip">&#9654;</div>
+			</div>
+			<div class="CWR-arrow" id="fromCWR-arrow">
+				<div class="line"></div>
+				<div class="right tip">&#9654;</div>
+			</div>
+		<!---->
+		
+	</div>
+	
+	<!-- Внутренняя шина данных -->
+	<div id="fromInteraction-toChannels-bus"></div>
+	<div id="toChannels-bus"></div>
+
+	<div id="channels"> <!-- Каналы -->
+		<div id="channel0" class="channel basis"> <!-- Канал №0 -->
+			<p class="title">Канал №0</p>
+			<div class="panel">
+				<div class="regs">
+					<input class="status in reg" readonly>
+					<input class="status out reg" readonly>
+					<input class="small in reg" readonly>
+					<input class="small out reg" readonly>
+					<input class="big in reg" readonly>
+					<input class="big out reg" readonly>
+					<input class="counter reg" placeholder="Счетчик" readonly>
+				</div>
+				<div class="labels">
+					<p class="status label">Статус</p>
+					<p class="small label">Младший</p>
+					<p class="big label">Старший</p>
+					<p class="in label">Вход</p>
+					<p class="out label">Выход</p>
+					<!-- <p class="counter label">Счетчик</p> -->
+				</div>
+			</div>
+			<div class="slots">
+				<div class="clk slot">
+					<div class="line"></div>
+					<button disabled>0</button>
+					<p>CLK</p>	
+				</div>
+				<div class="gate slot">
+					<div class="line"></div>
+					<button>0</button>
+					<p>GATE</p>	
+				</div>
+				<div class="out slot">
+					<button disabled>0</button>
+					<div class="line"></div>
+					<p>OUT</p>	
+				</div>
+			</div>
+			<div class="arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+		</div>
+		<div id="channel1" class="channel basis"> <!-- Канал №1 -->
+			<p class="title">Канал №1</p> 
+			<div class="panel">
+				<div class="regs">
+					<input class="status in reg" readonly>
+					<input class="status out reg" readonly>
+					<input class="small in reg" readonly>
+					<input class="small out reg" readonly>
+					<input class="big in reg" readonly>
+					<input class="big out reg" readonly>
+					<input class="counter reg" placeholder="Счетчик" readonly>
+				</div>
+				<div class="labels">
+					<p class="status label">Статус</p>
+					<p class="small label">Младший</p>
+					<p class="big label">Старший</p>
+					<p class="in label">Вход</p>
+					<p class="out label">Выход</p>
+					<!-- <p class="counter label">Счетчик</p> -->
+				</div>
+			</div>
+			<div class="slots">
+				<div class="clk slot">
+					<div class="line"></div>
+					<button disabled>0</button>
+					<p>CLK</p>	
+				</div>
+				<div class="gate slot">
+					<div class="line"></div>
+					<button>0</button>
+					<p>GATE</p>	
+				</div>
+				<div class="out slot">
+					<button disabled>0</button>
+					<div class="line"></div>
+					<p>OUT</p>	
+				</div>
+			</div>
+			<div class="arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+		</div>
+		<div id="channel2" class="channel basis"> <!-- Канал №2 -->
+			<p class="title">Канал №2</p> 
+			<div class="panel">
+				<div class="regs">
+					<input class="status in reg" readonly>
+					<input class="status out reg" readonly>
+					<input class="small in reg" readonly>
+					<input class="small out reg" readonly>
+					<input class="big in reg" readonly>
+					<input class="big out reg" readonly>
+					<input class="counter reg" placeholder="Счетчик" readonly>
+				</div>
+				<div class="labels">
+					<p class="status label">Статус</p>
+					<p class="small label">Младший</p>
+					<p class="big label">Старший</p>
+					<p class="in label">Вход</p>
+					<p class="out label">Выход</p>
+					<!-- <p class="counter label">Счетчик</p> -->
+				</div>
+			</div>
+			<div class="slots">
+				<div class="clk slot">
+					<div class="line"></div>
+					<button disabled>0</button>
+					<p>CLK</p>	
+				</div>
+				<div class="gate slot">
+					<div class="line"></div>
+					<button>0</button>
+					<p>GATE</p>	
+				</div>
+				<div class="out slot">
+					<button disabled>0</button>
+					<div class="line"></div>
+					<p>OUT</p>	
+				</div>
+			</div>
+			<div class="arrow">
+				<div class="line"></div>
+				<div class="tip">&#9660;</div>
+			</div>
+		</div>
+		<div id="generator" class="basis"> 	<!-- Генератор синхроимпульсов -->
+			<p class="title">Генератор синхроимпульсов</p>
+			<div class="screen"> <!-- Экран -->
+				<div class="horizont-line" id="generator-line-0"></div>
+				<div class="vertical-line" id="generator-line-1"></div>
+				<div class="horizont-line" id="generator-line-2"></div>
+				<div class="vertical-line" id="generator-line-3"></div>
+				<div class="horizont-line" id="generator-line-4"></div>
+				<div class="vertical-line" id="generator-line-5"></div>
+				<div class="horizont-line" id="generator-line-6"></div>
+				<div class="vertical-line" id="generator-line-7"></div>
+				<div class="horizont-line" id="generator-line-8"></div>
+				<div class="vertical-line" id="generator-line-9"></div>
+				<div class="horizont-line" id="generator-line-10"></div>
+				<div class="vertical-line" id="generator-line-11"></div>
+			</div>
+			<input type="text" placeholder="Период (мс)" maxlength="5" class="period">
+			<button class="play-stop">Старт</button>
+			<button class="single" title="Одиночный импульс">&#10752;</button>
+		</div>
+		<!-- Стрелочки -->
+		<div id="fromGeneratorLine-1"></div>
+		<div id="fromGeneratorLine-2"></div>
+		<div id="fromGeneratorLine-3"></div>
+		<div id="toClkVericalLine-0"></div>
+		<div id="toClkVericalLine-1"></div>
+		<div id="toClkVericalLine-2"></div>
+		<div id="toClkHorizontalLine-0"></div>
+		<div id="toClkHorizontalLine-1"></div>
+		<div id="toClkHorizontalLine-2"></div>
+		<div id="toClkTip-0">&#9668;</div>
+		<div id="toClkTip-1">&#9668;</div>
+		<div id="toClkTip-2">&#9668;</div>
+	</div>
+
+	<div id="features"> <!-- Дополнительные модули -->
+		<div id="assemblerer" class="basis"> <!-- Ассемблеровщик -->
+			<p class="title">Ассемблеровщик</p>
+			<textarea class="code" placeholder="Код" maxlength="1000"></textarea>
+			<button class="run">Запустить</button>
+		</div>
+		<div id="tasker" class="basis"> <!-- Задание -->
+			<p class="title">Задание</p>
+			<div class="main">
+				<div class="param n1">
+					<p class="label">Канал</p>
+					<input type="text" class="value">
+				</div>
+				<div class="param n2">
+					<p class="label">Режим</p>
+					<input type="text" class="value">
+				</div>
+				<div class="param n3">
+					<p class="label">Система</p>
+					<input type="text" class="value">
+				</div>
+				<div class="param n4">
+					<p class="label">Кпр</p>
+					<input type="text" class="value">
+				</div>
+			</div>
+			<button class="go">Получить</button>
+		</div>
+	</div>
+</body>
+</html>
